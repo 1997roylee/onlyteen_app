@@ -275,7 +275,7 @@ DEPENDENCIES
   devise-jwt (~> 0.10.0)
   doorkeeper
   dotenv-rails
-  faker
+  faker (~> 3.1)
   grape-entity (~> 0.10.1)
   kaminari (~> 1.2)
   pg (~> 1.1)
