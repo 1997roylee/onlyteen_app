@@ -49,3 +49,5 @@ gem 'kaminari', '~> 1.2' # For pagination
 gem 'aasm', '~> 5.2' # For state machine
 
 gem 'ransack' # For search
+
+gem 'public_activity', '~> 2.0'
