@@ -57,3 +57,5 @@ gem "rack-cors", "~> 1.1"
 gem "devise-jwt", "~> 0.10.0"
 
 gem "dotenv-rails", groups: [:development, :test]
+
+gem "faker", "~> 3.1"
