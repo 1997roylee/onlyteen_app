@@ -1,21 +1,21 @@
 import { defineConfig } from 'vite'
 import RubyPlugin from 'vite-plugin-ruby'
 import FullReload from 'vite-plugin-full-reload'
-import { resolve, __dirname } from 'path';
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [
     RubyPlugin(),
-    FullReload(['config/routes.rb', 'app/views/**/*'], { delay: 200 }),
-    // react()
+    FullReload(['config/routes.rb', 'app/views/**/*'], { delay: 200 })
   ],
   resolve: {
     alias: {
       components: resolve(__dirname, 'app/frontend/components'),
       pages: resolve(__dirname, 'app/frontend/pages'),
+      types: resolve(__dirname, 'app/frontend/types'),
       layouts: resolve(__dirname, 'app/frontend/layouts'),
       images: resolve(__dirname, 'app/frontend/images'),
-      types: resolve(__dirname, 'app/frontend/types'),
+      utils: resolve(__dirname, 'app/frontend/utils')
     },
   },
 })
