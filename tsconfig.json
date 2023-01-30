@@ -1,11 +1,13 @@
 {
     "compilerOptions": {
         "target": "ESNext",
+        "jsxImportSource": "@emotion/react",
         "useDefineForClassFields": true,
         "lib": [
             "DOM",
             "DOM.Iterable",
-            "ESNext"
+            "ESNext",
+            "es2017"
         ],
         "allowJs": false,
         "skipLibCheck": true,
@@ -18,10 +20,36 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+        "types": [
+            "node"
+        ],
+        "baseUrl": "app/frontend",
+        "paths": {
+            "pages/*": [
+                "pages/*",
+                "pages"
+            ],
+            "components/*": [
+                "components/*",
+                "components"
+            ],
+            "types/*": [
+                "types/*",
+                "types"
+            ],
+            "utils/*": [
+                "utils/*",
+                "utils"
+            ]
+        }
     },
     "include": [
-        "src"
+        "app/frontend/**/*",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx"
     ],
     "references": [
         {
