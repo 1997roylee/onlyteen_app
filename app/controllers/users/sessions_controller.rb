@@ -6,11 +6,17 @@ module Users
 
     private
 
-    def respond_with(_resource, _opts = {})
-      render_success({
-        message: "Signed in.",
-        resource: current_user,
-      })
+    def respond_with(resource, _opts = {})
+      if resource.id.present?
+        render_success({
+          message: "Signed in.",
+          resource:,
+        })
+      else
+        render_errors({
+          message: "Signed in failure.",
+        })
+      end
     end
 
     def respond_to_on_destroy
