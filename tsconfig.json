@@ -41,7 +41,11 @@
             "utils/*": [
                 "utils/*",
                 "utils"
-            ]
+            ],
+            "stores/*": [
+                "stores/*",
+                "stores"
+            ],
         }
     },
     "include": [

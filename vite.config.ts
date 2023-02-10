@@ -4,6 +4,9 @@ import FullReload from 'vite-plugin-full-reload'
 import { resolve } from 'path';
 
 export default defineConfig({
+  define: {
+    'process.env': process.env
+  },
   plugins: [
     RubyPlugin(),
     FullReload(['config/routes.rb', 'app/views/**/*'], { delay: 200 })
@@ -15,7 +18,8 @@ export default defineConfig({
       types: resolve(__dirname, 'app/frontend/types'),
       layouts: resolve(__dirname, 'app/frontend/layouts'),
       images: resolve(__dirname, 'app/frontend/images'),
-      utils: resolve(__dirname, 'app/frontend/utils')
+      utils: resolve(__dirname, 'app/frontend/utils'),
+      stores: resolve(__dirname, 'app/frontend/stores'),
     },
   },
 })
