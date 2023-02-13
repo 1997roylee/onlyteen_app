@@ -26,6 +26,7 @@ const {
     CloseButton,
     Alert,
     Avatar,
+    Textarea
 } = chakraTheme.components;
 
 const fonts = {
@@ -60,6 +61,7 @@ const components = {
     Input,
     Checkbox,
     Skeleton,
+    Textarea,
     // Text: {
     //     baseStyle: {
     //         color: '#001430',
