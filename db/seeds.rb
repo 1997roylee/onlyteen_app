@@ -9,17 +9,29 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 if Rails.env.development?
-  user = User.create!(
-    email: "demo@onlyteen.app",
-    password: "password",
-    password_confirmation: "password",
-  )
+  user = if User.count.blank?
+    User.create(
+      email: "demo@onlyteen.app",
+      password: "password",
+      password_confirmation: "password",
+    )
+  else
+    User.find_by(email: "demo@onlyteen.app")
+  end
 
-  10.times do
-    Post.create!(
-      title: Faker::Lorem.sentence,
-      body: Faker::Lorem.paragraph,
-      user: user
+  # Channel.find_or_create_by(
+  #   owner: user,
+  #   slug: "demo",
+  #   name: "DEMO Channel",
+  # )
+
+  if School.count.blank?
+    School.create(
+      name: "Demo School",
+      slug: "demo-school",
+      address: "123 Demo Street",
+      city: "Demo City",
+      school_level: "middle_school",
     )
   end
 end
