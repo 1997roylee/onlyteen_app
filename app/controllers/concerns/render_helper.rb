@@ -15,10 +15,13 @@ module RenderHelper
   end
 
   def render_errors(errors, status = :unprocessable_entity)
-    render_json({
-      errors:,
-      status:,
-    }, status)
+    render_json(
+      {
+        errors:,
+        status:,
+      },
+      status,
+    )
   end
 
   def render_json(json, status = :ok)
